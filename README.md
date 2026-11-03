@@ -12,16 +12,16 @@ Unreal Engine 5.5 블루프린트로 만든 **3인칭 핵앤슬래시 프로토�
 | 엔진 | Unreal Engine 5.5 |
 | 구현 방식 | 블루프린트 |
 | 장르 | 3인칭 핵앤슬래시 |
-| 기간 | 2025.04 |
+| 기간 | 2025.04 (마지막 커밋 기준) |
 | 인원 | 1인 |
 | 이어지는 작업 | [20250430Test](https://github.com/leemingeun10/20250430Test) (2차 프로토타입) |
 
 ## 구현한 시스템
 
 - **플레이어**: 마법사 캐릭터(`BP_Wizard`)와 전용 애니메이션 블루프린트(`ABP_main`)
-- **스킬**: 스킬 부모 클래스(`BP_SkillBase`)를 두고 보호막(`BP_shield`) 등 스킬을 확장하는 구조
-- **몬스터**: 공통 부모(`BP_BaseMonster`)를 상속해 비홀더, 선인장, 미믹(상자), 버섯 4종을 구현
-- **컴포넌트 분리**: 몬스터 스탯(`BP_MonStatComponent`)과 스폰(`BP_MonSpwanComponent`)을 컴포넌트로 분리해 몬스터마다 재사용
+- **스킬**: 스킬 기본 블루프린트(`BP_SkillBase`)와 보호막(`BP_shield`)
+- **몬스터**: 공통 몬스터 블루프린트(`BP_BaseMonster`)와 비홀더, 선인장, 미믹(상자), 버섯 4종
+- **컴포넌트**: 몬스터 스탯(`BP_MonStatComponent`)과 스폰(`BP_MonSpwanComponent`) 컴포넌트
 - **보상**: 몬스터 처치 시 골드(`BP_GoldBall`) 드롭
 - **UI**: 이름표 컴포넌트(`BP_NameTagComponet`)와 HUD(`BP_Hud`)
 
